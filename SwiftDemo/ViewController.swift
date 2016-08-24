@@ -24,11 +24,7 @@ class ViewController: UIViewController {
             
             
         }
-        
-        self.viewTapClick { () -> Void in
-            
-            
-        }
+    
         
         self.blockDemoClcick { () -> (String) in
             
@@ -356,13 +352,56 @@ class ViewController: UIViewController {
         //生成一个空字典
         var modelDic = Dictionary<String,String>()
     
-        //
+        self.LearnControlLine()
+    }
+    
+    ///swift 控制流
+    func LearnControlLine(){
+    
+//        Switch
+//        
+//        Switch语句用一个值来匹配相对应的几个匹配模式。然后执行相对应的代码块，基于一开始匹配成功的模式。switch语句提供了应对多种选择情况的处理来替代if语句。
+//        
+//        最简单的形式，switch比较一个值对应的一个或者多个相同形式的值：
+        //相比C和objective-c中的switch语句，Swift中（如果忘了写break）的switch不会默认的掉落到每个case的下面进入另一个case。相反，switch语句当第一个遇到的
+        //case完成时就完成了它整个的执行，不需要写break。因此比起C语言，swift的switch更加安全和简单，避免了执行多个case的错误。
+    
+        print("带有返回值的 \(learnFunction(personName: "sss"))")
+        
+       learnNoReturns(modelStr: "ss")
+    }
+    
+ 
+    /**
+     函数 外部参数名称速记
+     
+     - parameter personName: 输入的参数
+     
+     - returns: 返回一个参数
+     */
+    func learnFunction(personName personName:String)->String{
+
+        let greeting = "返回的数据" + personName + "!"
+        
+        return greeting
     }
     
 
+    /**
+     <#Description#>
+     
+     - parameter modelStr: <#modelStr description#>
+     */
+    func learnNoReturns(modelStr modelStr:String)->Void{
+    
+        
+        
+    }
+    
+    
     func viewTapClick(animations: () -> Void){
     
-
+        self.performSegueWithIdentifier("DetailViewController", sender: nil)
         
     }
     
@@ -370,6 +409,15 @@ class ViewController: UIViewController {
     
         
         
+        
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        self.viewTapClick { () -> Void in
+            
+            
+        }
         
     }
     
