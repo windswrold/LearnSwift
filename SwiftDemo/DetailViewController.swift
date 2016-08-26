@@ -146,10 +146,28 @@ class DetailViewController: UIViewController {
 //        它声明在类中，可以通过实例化类来访问它的值。
 //        枚举也可以定义构造函数（initializers）来提供一个初始成员值；可以在原始的实现基础上扩展它们的功能。
 //        可以遵守协议（protocols）来提供标准的功能。
+        // 定义枚举
+        enum DaysofaWeek {
+          
+            case Sunday
+            
+            case Monday
+            
+            case TUESDAY
+            
+            case WEDNESDAY
+            
+            case THURSDAY
+            
+            case FRIDAY
+            
+            case Saturday
+        }
         
+       var weekDay = DaysofaWeek.THURSDAY
         
-        
-        
+       weekDay = .THURSDAY
+       
         
         
         
