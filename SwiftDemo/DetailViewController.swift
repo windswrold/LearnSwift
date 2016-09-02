@@ -29,8 +29,13 @@ class DetailViewController: UIViewController {
         
 //        LearnSubscriptData()
         
-        LearnBaseClassData()
+//        LearnBaseClassData()
         
+//        LearnDeinitializerData()
+        
+//        LearnDeinitData()
+        
+        LearnOptionalChainingData()
         
     }
     
@@ -755,9 +760,281 @@ class DetailViewController: UIViewController {
      */
     func LearnBaseClassData() -> Void {
         
+        //基类
+//        没有继承其它类的类，称之为基类（Base Class）。
+//        以下实例中我们定义了基类 StudDetails ，描述了学生（stname）及其各科成绩的分数(mark1、mark2、mark3)：
+        
+        class BaseStudentDetails{
+        
+             //String!
+            var stname :String?{
+            
+//                return self.stname
+                
+                get{
+                
+                     return self.stname
+                }
+                
+                set{
+                
+                    self.stname = newValue
+                }
+                
+            }
+            
+            var mark1  = 0
+            
+            var mark2  = 0
+            
+            var mark3  = 0
+            
+            init(stnamr:String,mark1:Int ,mark2:Int,mark3:Int){
+                
+                self.stname = stnamr
+                
+                self.mark1 = mark1
+                
+                self.mark2 = mark2
+                
+                self.mark3 = mark3
+            
+            }
+           
+            //final
+//            防止重写
+//            我们可以使用 final 关键字防止它们被重写。
+//            如果你重写了final方法，属性或下标脚本，在编译时会报错。
+//            你可以通过在关键字class前添加final特性（final class）来将整个类标记为 final 的，这样的类是不可被继承的，否则会报编译错误。
+          final  func show() -> Void {
+                
+                print("猜猜猜 \(self.stname),mark \(self.mark1) mark \(self.mark2) mark \(self.mark3)")
+            }
+            
+        }
+        
+        //子类
+//        子类指的是在一个已有类的基础上创建一个新的类。
+//        为了指明某个类的超类，将超类名写在子类名的后面，用冒号(:)分隔,语法格式如下
+        class someClaa:BaseStudentDetails {
+        
+            //重载（override）子类可以通过继承来的实例方法，类方法，实例属性，或下标脚本来实现自己的定制功能，我们把这种行为叫重写（overriding）。
+//            我们可以使用 override 关键字来实现重写。
+//            访问超类的方法、属性及下标脚本
+//            你可以通过使用super前缀来访问超类的方法，属性或下标脚本。
+
+            private override var stname: String?{
+            
+                get{
+                
+                    return "重写了get"
+                }
+            
+                set{
+                
+                    print("设置的新增 \(newValue)")
+                    
+                }
+                
+            }
+            
+            
+            init() {
+            
+                super.init(stnamr: "10", mark1: 10, mark2: 10, mark3: 10)
+           
+            }
+        
+            //不能重写show 因为使用了final
+//            private override func show() {
+//                
+//                super.show()
+//                
+//                print("子类的show方法")
+//                
+//            }
+            
+            
+        }
+        
+        let some = someClaa()
+        
+        some.show()
+
+        //重写属性
+//        你可以提供定制的 getter（或 setter）来重写任意继承来的属性，无论继承来的属性是存储型的还是计算型的属性。
+//        子类并不知道继承来的属性是存储型的还是计算型的，它只知道继承来的属性会有一个名字和类型。所以你在重写一个属性时，必需将它的名字和类型都写出来。
+//        注意点：
+//        如果你在重写属性中提供了 setter，那么你也一定要提供 getter。
+//        如果你不想在重写版本中的 getter 里修改继承来的属性值，你可以直接通过super.someProperty来返回继承来的值，其中someProperty是你要重写的属性的名字。
+
+        
         
         
     }
+    
+    /**
+      学习构造过程
+     */
+    func LearnDeinitializerData() -> Void {
+        
+//        构造过程是为了使用某个类、结构体或枚举类型的实例而进行的准备过程。这个过程包含了为实例中的每个属性设置初始值和为其执行必要的准备和初始化任务。
+//        Swift 构造函数使用 init() 方法。
+//        与 Objective-C 中的构造器不同，Swift 的构造器无需返回值，它们的主要任务是保证新实例在第一次使用前完成正确的初始化。
+//        类实例也可以通过定义析构器（deinitializer）在类实例释放之前执行清理内存的工作。
+        
+        
+        
+        
+    }
+    
+    /**
+     学习析构过程
+     */
+    func LearnDeinitData() -> Void {
+        
+//        在一个类的实例被释放之前，析构函数被立即调用。用关键字deinit来标示析构函数，类似于初始化函数用init来标示。析构函数只适用于类类型。
+//        反初始化函数是在实例释放发生前一步被自动调用。不允许主动调用自己的反初始化函数。子类继承了父类的反初始化函数，并且在子类反初始化函数实现的最后，父类的反初始化函数被自动调用。即使子类没有提供自己的反初始化函数，父类的反初始化函数也总是被调用。
+//        
+//        因为直到实例的反初始化函数被调用时，实例才会被释放，所以反初始化函数可以访问所有请求实例的属性，并且根据那些属性可以修改它的行为(比如查找一个需要被关闭的文件的名称)。
+        
+        //Bank结构体管理一个虚拟货币的流通，在这个流通中Bank永远不可能拥有超过10,000的硬币。在这个游戏中有且只能有一个Bank存在，因此Bank由带有静态属性和静态方法的结构体实现，从而存储和管理其当前的状态。
+//        Bank根据它的coinsInBank属性来跟踪当前它拥有的硬币数量。银行还提供两个方法—vendCoins和receiveCoins，用来处理硬币的分发和收集。
+        struct Bank{
+        
+            static var coninsInBank = 10_000
+            
+            static func vendConins(var numberOfConinsToVend : Int) ->Int {
+            
+                numberOfConinsToVend = min(coninsInBank, numberOfConinsToVend)
+                
+                coninsInBank -= numberOfConinsToVend
+            
+                return numberOfConinsToVend
+            }
+        
+            static func receiveCoins(coins :Int){
+            
+                coninsInBank += coins
+            }
+        
+        }
+    
+        //Player类描述了游戏中的一个玩家。每一个player在任何时刻都有一定数量的硬币存储在他们的钱包中。这通过player的coinsInPurse属性来体现:
+//        Player类定义了一个winCoins方法，该方法从bank获取一定数量的硬币，并把它们添加到player的钱包。Player类还实现了一个反初始化函数，这个反初始化函数在Player实例释放前一步被调用。这里反初始化函数只是将player的所有硬币都返回给bank:
+        class Player{
+        
+            var coinsInGame  = 0
+            
+            init(conins : Int){
+            
+                self.coinsInGame = Bank.vendConins(conins)
+                
+            }
+            
+            func winCoins(coins : Int) -> Void {
+               
+                self.coinsInGame += Bank.vendConins(coins)
+                
+            }
+            
+            deinit{
+            
+                Bank.receiveCoins(self.coinsInGame)
+            }
+            
+        
+        }
+
+
+        
+    }
+    
+    /**
+     可选连
+     */
+    func LearnOptionalChainingData() -> Void {
+        
+//        可选链（Optional Chaining）是一种是一种可以请求和调用属性、方法和子脚本的过程，用于请求或调用的目标可能为nil。
+//        可选链返回两个值：
+//        如果目标有值，调用就会成功，返回该值
+//        如果目标为nil，调用将返回nil
+//        多次请求或调用可以被链接成一个链，如果任意一个节点为nil将导致整条链失效。
+//        ep1
+    
+        
+//                可选链 '?'	感叹号（!）强制展开方法，属性，下标脚本可选链
+//        ? 放置于可选值后来调用方法，属性，下标脚本	! 放置于可选值后来调用方法，属性，下标脚本来强制展开值
+//        当可选为 nil 输出比较友好的错误信息	当可选为 nil 时强制展开执行错误
+        
+        class Room{
+        
+            let name : String
+            
+            init(name:String){
+            
+                self.name = name
+            }
+            
+        }
+        
+        class Residence{
+            
+            var numberOfRooms = 0
+            
+//             定义了一个变量 rooms，它被初始化为一个Room[]类型的空数组
+            var rooms = [Room]()
+            
+            var numberofRooms : Int{
+            
+                return self.rooms.count
+            }
+            
+            subscript (i :Int) ->Room{
+            
+                var count = i
+                
+                if
+                    count>self.rooms.count{
+                
+                    count = self.rooms.count
+                }
+                
+                return self.rooms[count]
+                
+            }
+           
+            func showLog() -> Void {
+                
+                print("haha ")
+                
+            }
+            
+            
+        }
+        
+        class Person{
+        
+            var residence : Residence?
+            
+        }
+    
+        let jack = Person()
+        
+//        let numer =  jack.residence!.numberOfRooms //想使用感叹号（!）强制解析获得这个人residence属性numberOfRooms属性值，将会引发运行时错误，因为这时没有可以供解析的residence值。
+//        let numer =  jack.residence?.numberOfRooms
+        
+        if  let numer =  jack.residence?.numberOfRooms {
+            
+            print("房间号是 \(numer)")
+            
+        }else{
+        
+            print("不能查看房间号")
+        }
+    
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

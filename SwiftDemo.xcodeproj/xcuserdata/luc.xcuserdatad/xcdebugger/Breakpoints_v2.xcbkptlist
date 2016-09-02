@@ -10,38 +10,54 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494325074.729754"
+            timestampString = "494491382.286202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "504"
-            endingLineNumber = "504"
-            landmarkName = "LearnPropertyData()"
-            landmarkType = "5">
+            startingLineNumber = "506"
+            endingLineNumber = "506"
+            landmarkName = "myStudent"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemo/DetailViewController.swift"
+            timestampString = "494491382.286202"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "498"
+            endingLineNumber = "498"
+            landmarkName = "number"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(sample #1).init () -&gt; SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(sample #1)"
+                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(myStudent #1).init () -&gt; SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(myStudent #1)"
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.689249"
+                  timestampString = "494491384.285396"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "510"
-                  endingLineNumber = "510"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "504"
+                  endingLineNumber = "504"
+                  offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(sample #1).__deallocating_deinit"
+                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(myStudent #1).__deallocating_deinit"
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.689447"
+                  timestampString = "494491384.285596"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -52,16 +68,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(sample #1).deinit"
+                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(myStudent #1).deinit"
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.689595"
+                  timestampString = "494491384.285766"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -73,11 +89,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494325074.729754"
+            timestampString = "494491382.286202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "496"
-            endingLineNumber = "496"
+            startingLineNumber = "503"
+            endingLineNumber = "503"
             landmarkName = "myStudent"
             landmarkType = "3">
             <Locations>
@@ -89,11 +105,11 @@
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.720882"
+                  timestampString = "494491384.287283"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "496"
-                  endingLineNumber = "496"
+                  startingLineNumber = "504"
+                  endingLineNumber = "504"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
@@ -104,11 +120,11 @@
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.721181"
+                  timestampString = "494491384.287471"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "496"
-                  endingLineNumber = "496"
+                  startingLineNumber = "504"
+                  endingLineNumber = "504"
                   offsetFromSymbolStart = "204">
                </Location>
                <Location
@@ -119,11 +135,11 @@
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.721308"
+                  timestampString = "494491384.287638"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "496"
-                  endingLineNumber = "496"
+                  startingLineNumber = "504"
+                  endingLineNumber = "504"
                   offsetFromSymbolStart = "64">
                </Location>
             </Locations>
@@ -136,29 +152,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494325074.729754"
+            timestampString = "494491382.286202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "501"
-            endingLineNumber = "501"
+            startingLineNumber = "489"
+            endingLineNumber = "489"
             landmarkName = "LearnPropertyData()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494325074.729754"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "487"
-            endingLineNumber = "487"
-            landmarkName = "number"
-            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -168,85 +168,22 @@
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.744564"
+                  timestampString = "494491384.288415"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "487"
-                  endingLineNumber = "487"
+                  startingLineNumber = "495"
+                  endingLineNumber = "495"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(number #1).name.getter : Swift.String"
+                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(number #1).__deallocating_deinit"
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.744856"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "487"
-                  endingLineNumber = "487"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(number #1).name.setter : Swift.String"
-                  moduleName = "SwiftDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.744996"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "487"
-                  endingLineNumber = "487"
-                  offsetFromSymbolStart = "92">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494325074.729754"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "537"
-            endingLineNumber = "537"
-            landmarkName = "LearnPropertyData()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(Samplepgm #1).init () -&gt; SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(Samplepgm #1)"
-                  moduleName = "SwiftDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.74615"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "553"
-                  endingLineNumber = "553"
-                  offsetFromSymbolStart = "8">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(Samplepgm #1).__deallocating_deinit"
-                  moduleName = "SwiftDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.746286"
+                  timestampString = "494491384.28858"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -257,16 +194,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(Samplepgm #1).deinit"
+                  symbolName = "SwiftDemo.DetailViewController.(LearnPropertyData () -&gt; ()).(number #1).deinit"
                   moduleName = "SwiftDemo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/luc/Desktop/LearnSwift/SwiftDemo/DetailViewController.swift"
-                  timestampString = "494326100.746409"
+                  timestampString = "494491384.288743"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -278,11 +215,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494326100.348349"
+            timestampString = "494491382.286202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "702"
-            endingLineNumber = "702"
+            startingLineNumber = "539"
+            endingLineNumber = "539"
+            landmarkName = "LearnPropertyData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDemo/DetailViewController.swift"
+            timestampString = "494491382.286202"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "704"
+            endingLineNumber = "704"
             landmarkName = "daysofaweek"
             landmarkType = "3">
          </BreakpointContent>
@@ -294,11 +247,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftDemo/DetailViewController.swift"
-            timestampString = "494326102.036085"
+            timestampString = "494491382.286202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "716"
-            endingLineNumber = "716"
+            startingLineNumber = "718"
+            endingLineNumber = "718"
             landmarkName = "daysofaweek"
             landmarkType = "3">
          </BreakpointContent>
