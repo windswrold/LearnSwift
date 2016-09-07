@@ -35,7 +35,9 @@ class DetailViewController: UIViewController {
         
 //        LearnDeinitData()
         
-        LearnOptionalChainingData()
+//        LearnOptionalChainingData()
+        
+        LearnMeromryData()
         
     }
     
@@ -1033,6 +1035,58 @@ class DetailViewController: UIViewController {
             print("不能查看房间号")
         }
     
+    }
+    
+    /**
+     内存管理
+     */
+    func LearnMeromryData() -> Void {
+        
+        //定义一个类为人
+        class Person{
+        
+            let name :String
+            
+            init(name : String){
+            
+                self.name = name
+                
+                print("开始初始化")
+            }
+            
+            deinit{
+            
+                print("被析构")
+            }
+            
+        }
+        
+        //值会自动初始化为nil,目前还不会引用到person实例
+        var reference1 :Person?
+        
+        var reference2 :Person?
+        
+        var reference3 :Person?
+        
+        //创建新实例
+        reference1 = Person.init(name: "reference")
+        
+        //赋值给其他俩个变量又会多出俩个新的强引用
+        reference2 = reference1 //俩个单独的
+        
+        reference3 = reference1 //单独的
+        
+        //断开第一个引用
+        reference1 = nil
+        
+        print("per 1 \(reference2?.name),per3 \(reference3?.name)")
+        
+        reference2 = nil
+        
+        print("per 1 \(reference2?.name),per3 \(reference3?.name)")
+    
+        //无主引用是正确的解决循环强引用的方法。这样编写HTMLElement类来避免循环强引用：
+        
     }
     
     
