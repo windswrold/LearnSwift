@@ -1086,9 +1086,70 @@ class DetailViewController: UIViewController {
         print("per 1 \(reference2?.name),per3 \(reference3?.name)")
     
         //无主引用是正确的解决循环强引用的方法。这样编写HTMLElement类来避免循环强引用：
+//        解决实例之间的循环强引用
+//        Swift 提供了两种办法用来解决你在使用类的属性时所遇到的循环强引用问题：
+//        弱引用
+//        无主引用
+//        弱引用和无主引用允许循环引用中的一个实例引用另外一个实例而不保持强引用。这样实例能够互相引用而不产生循环强引用。
+//        对于生命周期中会变为nil的实例使用弱引用。相反的，对于初始化赋值后再也不会被赋值为nil的实例，使用无主引用。
+
+//        *********************** 弱引用实例 ***********************
+        
+        class Module{
+        
+            let name : String
+            
+            init (name : String){self.name = name}
+            
+            var sub:SubModule?
+            
+            deinit{print("被析构  \(name)")}
+            
+            
+        }
+        
+        class SubModule{
+        
+            let number : Int
+            
+            init (num:Int){self.number = num}
+            
+            //弱引用
+//            weak var toppic : Module?
+              var toppic : Module?
+            
+            
+            
+            deinit{print("子模块呗析构")}
+            
+            
+        }
+        
+        var toc : Module?
+        
+        var list :SubModule?
+        
+        toc = Module(name:"ss")
+        
+        list = SubModule(num : 12)
+        
+        toc!.sub = list
+        
+        list!.toppic = toc
+        
+//        toc = nil
+//        
+//        list = nil
+        
+        
         
     }
     
+    deinit{
+    
+        print("vc 被析构")
+    
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
