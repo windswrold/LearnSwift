@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 //import Cocoa
 
 class DetailViewController: UIViewController {
@@ -39,7 +40,11 @@ class DetailViewController: UIViewController {
         
 //        LearnMeromryData()
         
-        learnParmaDataType()
+//        learnParmaDataType()
+        
+//        learnExtensionType()
+        
+        learnExangeData()
         
     }
     
@@ -1267,16 +1272,133 @@ class DetailViewController: UIViewController {
         for items in exampleany {
             
             switch items {
-            
-            case <#pattern#>:
-                <#code#>
+            case let someint as Int:
+                
+                print("someint \(someint)")
+                
+            case let someString as String:
+                
+                print("someString \(someString)")
+            case let  someDocuble as Double:
+                
+                print("somedocuble \(someDocuble)")
+                
+            case let someChemisity as chemistry :
+               
+                print("化学的信息了 \(someChemisity)")
+                
             default:
-                <#code#>
+                
+                print("NONE  \(items)")
             }
+           
             
         }
         
     }
+    
+    /**
+     学习extension 扩展
+     */
+    func learnExtensionType() -> Void {
+        
+//        扩展就是向一个已有的类、结构体或枚举类型添加新功能。
+//        扩展可以对一个类型添加新的功能，但是不能重写已有的功能。
+//        Swift 中的扩展可以：
+//        添加计算型属性和计算型静态属性
+//        定义实例方法和类型方法
+//        提供新的构造器
+//        定义下标
+//        定义和使用新的嵌套类型
+//        使一个已有类型符合某个协议
+//        语法
+//        扩展声明使用关键字 extension：
+//        extension SomeType {
+//            // 加到SomeType的新功能写到这里
+//        }
+//        一个扩展可以扩展一个已有类型，使其能够适配一个或多个协议，语法格式如下：
+//        extension SomeType: SomeProtocol, AnotherProctocol {
+//            // 协议实现写到这里
+//        }
+        
+//        eg1.计算型属性 没用倒文件
+        
+        var number = 10.add
+        
+        number.sub
+        
+        //构造器
+
+//        构造器
+//        扩展可以向已有类型添加新的构造器。
+//        这可以让你扩展其它类型，将你自己的定制类型作为构造器参数，或者提供该类型的原始实现中没有包含的额外初始化选项。
+//        扩展可以向类中添加新的便利构造器 init()，但是它们不能向类中添加新的指定构造器或析构函数 deinit() 。
+        
+        
+        
+        
+    }
+    
+    /**
+     泛型
+     */
+    func learnExangeData() -> Void {
+        
+//        Swift 提供了泛型让你写出灵活且可重用的函数和类型。
+//        Swift 标准库是通过泛型代码构建出来的。
+//        Swift 的数组和字典类型都是泛型集。
+//        你可以创建一个Int数组，也可创建一个String数组，或者甚至于可以是任何其他 Swift 的类型数据数组。
+        
+        var numb1 = 100
+        
+        var numb2 = 200
+        
+        exchange(&numb1, b: &numb2)
+        
+        print("jiao")
+        
+//        泛型类型
+//        Swift 允许你定义你自己的泛型类型。
+//        自定义类、结构体和枚举作用于任何类型，如同Array和Dictionary的用法。
+        struct TOS<T> {
+            var items = [T]()
+            mutating func push(item: T) {
+                items.append(item)
+            }
+            
+            mutating func pop() -> T {
+                return items.removeLast()
+            }
+        }
+        var tos = TOS<String>()
+        tos.push("Swift")
+        print(tos.items)
+        
+        tos.push("泛型")
+        print(tos.items)
+        
+        tos.push("类型参数")
+        print(tos.items)
+        
+        tos.push("类型参数名")
+        print(tos.items)
+
+
+        
+        
+    }
+    
+
+//    func exchange(inout a : Int, inout b: Int) -> Void {
+//       
+//        let temp = a
+//        
+//        a = b
+//        
+//        b = temp
+//        
+//    }
+    
     
     deinit{
     
