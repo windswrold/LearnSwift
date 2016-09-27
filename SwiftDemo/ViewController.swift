@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 
 
@@ -20,10 +40,10 @@ class ViewController: UIViewController {
         backView.backgroundColor = UIColor.init(red: 10/255.0, green: 20/255.0, blue: 30/255.0, alpha: 1)
         
         
-        UIView.animateWithDuration(2) { () -> Void in
+        UIView.animate(withDuration: 2, animations: { () -> Void in
             
             
-        }
+        }) 
     
         
         self.blockDemoClcick { () -> (String) in
@@ -38,11 +58,11 @@ class ViewController: UIViewController {
         //你可以在一行中声明多个常量或者多个变量，用逗号隔开：
         var _a  = 10, _b=1, _c=0
         
-        _a++
+        _a += 1
         
-        _c++
+        _c += 1
         
-        _b++
+        _b += 1
         
         //注意：如果你的代码中有不需要改变的值，请使用let关键字将它声明为常量。只将需要改变的值声明为变量。
         
@@ -203,7 +223,7 @@ class ViewController: UIViewController {
         print("1  \(wiseWords) 2\(dollarSign) 3\(blackHeart) 4\(sparklingHeart) ")
         
         
-        var emptyString :String = "test"               // 空字符串字面量
+        let emptyString :String = "test"               // 空字符串字面量
         
         var anotherEmptyString = String()  // 初始化 String 实例
         // 两个字符串均为空并等价。
@@ -262,7 +282,7 @@ class ViewController: UIViewController {
         
         for scene in romeoAndJuliet {
             if scene.hasSuffix("cell") {
-                ++act1SceneCount
+                act1SceneCount += 1
             }
         }
         print("There are \(act1SceneCount) scenes in Act 1")
@@ -302,19 +322,19 @@ class ViewController: UIViewController {
         
         //使用insert 添加
         
-        telPhoneList.insert(159, atIndex: 0)
+        telPhoneList.insert(159, at: 0)
         
         //使用removeAtIndex
         
-        print("移除 第\(telPhoneList.count-1) 元素值 \(telPhoneList.removeAtIndex(telPhoneList.count-1))")
+        print("移除 第\(telPhoneList.count-1) 元素值 \(telPhoneList.remove(at: telPhoneList.count-1))")
         
         //使用EnumerateSequence函数来遍历数租 返回值是一个元组
-        let hahahlist  = EnumerateSequence(telPhoneList)
-        
-        for phoneObj in hahahlist{
-            
-            print("便利后返回元祖 \(phoneObj)")
-        }
+//        let hahahlist  = EnumeratedSequence.
+//        
+//        for phoneObj in hahahlist{
+//            
+//            print("便利后返回元祖 \(phoneObj)")
+//        }
         //声明一个空的数组
         var updateArr = [Int]()
         
@@ -341,7 +361,7 @@ class ViewController: UIViewController {
         }
         //从字典中删除键值对也可以使用removeValueForKey函数。如果该键值对存在，该函数就返回本删掉的值，如果不存在，就返回nil：
         
-        if let removeObj =  aipDic.removeValueForKey("1"){
+        if let removeObj =  aipDic.removeValue(forKey: "1"){
         
             print("移除掉的数据是 \(removeObj)")
         }else{
@@ -379,7 +399,7 @@ class ViewController: UIViewController {
      
      - returns: 返回一个参数
      */
-    func learnFunction(personName personName:String)->String{
+    func learnFunction(personName:String)->String{
 
         let greeting = "返回的数据" + personName + "!"
         
@@ -392,27 +412,27 @@ class ViewController: UIViewController {
      
      - parameter modelStr: <#modelStr description#>
      */
-    func learnNoReturns(modelStr modelStr:String)->Void{
+    func learnNoReturns(modelStr:String)->Void{
     
         
         
     }
     
     
-    func viewTapClick(animations: () -> Void){
+    func viewTapClick(_ animations: () -> Void){
     
-        self.performSegueWithIdentifier("DetailViewController", sender: nil)
+        self.performSegue(withIdentifier: "DetailViewController", sender: nil)
         
     }
     
-    func blockDemoClcick(successBlock:()->(String)){
+    func blockDemoClcick(_ successBlock:()->(String)){
     
         
         
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.viewTapClick { () -> Void in
             

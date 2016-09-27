@@ -87,20 +87,20 @@ class DetailViewController: UIViewController {
         
         var names = ["1Chris", "aAlex", "2Ewa", "4Barry", "0Daniella","98"]
         
-        print("不使用普通函数为\(names.sort())") //从小到大
+        print("不使用普通函数为\(names.sorted())") //从小到大
         
         //使用普通函数
-        func backwards(s1:String,s2:String) ->Bool {
+        func backwards(_ s1:String,s2:String) ->Bool {
             
             return s1 > s2
         }
         
-        var reversed = names.sort(backwards)
+        var reversed = names.sorted(by: backwards)
         
         print("使用普通函数 \(reversed)")
         
         //        不使用闭包
-        names.sortInPlace() //  从小到大
+        names.sort() //  从小到大
         
         for var stringObj in names{
             
@@ -108,7 +108,7 @@ class DetailViewController: UIViewController {
             
         }
         //        使用闭包表达式
-        names.sortInPlace { (num1:String, num2:String) -> Bool in return num1 > num2  }//从大到小
+        names.sort { (num1:String, num2:String) -> Bool in return num1 > num2  }//从大到小
         
         print("stringObje2 + \(names)")
         
@@ -116,21 +116,21 @@ class DetailViewController: UIViewController {
         //        由于swift的类型推断机制，闭包可以省去参数的类型和返回值的类型，简化之后，代码如下：
         //
         //        names.sortInPlace({(num1,num2) in num1>num2})
-        names.sortInPlace({(num1,num2) in num1>num2})
+        names.sort(by: {(num1,num2) in num1>num2})
         
         print("stringObje3 + \(names)")
         
         //        参数名简写
         //        Swift自动为内联函数提供了参数名称简写功能，我们可以直接通过 $0,$1,$2 等名字来引用闭包中的参数。简化之后，
-        names.sortInPlace({$0>$1})
+        names.sort(by: {$0>$1})
         
         //        运算符函数
-        names.sortInPlace(>)
+        names.sort(by: >)
         
         print("尾随闭包之前 \(names)")
         //        尾随闭包
         //        尾随闭包是一个书写在函数括号之后的闭包表达式，函数支持将其作为最后一个参数调用。
-        var newNames = names.sort(){$0<$1}
+        var newNames = names.sorted(){$0<$1}
         
         print("尾随闭包之后 newname  = \(newNames)")
         
@@ -140,7 +140,7 @@ class DetailViewController: UIViewController {
         //        Swift最简单的闭包形式是嵌套函数，也就是定义在其他函数的函数体内的函数。
         //        嵌套函数可以捕获其外部函数所有的参数以及定义的常量和变量。
         
-        func makeIncrementor(forIncrement amount:Int) ->Void ->Int {
+        func makeIncrementor(forIncrement amount:Int) ->(Void) ->Int {
             
             var runningTotal = 0
             
@@ -193,7 +193,7 @@ class DetailViewController: UIViewController {
         // 定义枚举
         enum DaysofaWeek :Int{
             
-            case Sunday = 1, Monday,WEDNESDAY ,THURSDAY,FRIDAY ,Saturday
+            case sunday = 1, monday,wednesday ,thursday,friday ,saturday
             
             //            case Monday
             //
@@ -208,9 +208,9 @@ class DetailViewController: UIViewController {
             //            case Saturday
         }
         
-        var weekDay = DaysofaWeek.THURSDAY
+        var weekDay = DaysofaWeek.thursday
         
-        weekDay = .THURSDAY
+        weekDay = .thursday
         
         //原始值
         //原始值可以是字符串，字符，或者任何整型值或浮点型值。每个原始值在它的枚举声明中必须是唯一的。
@@ -231,25 +231,25 @@ class DetailViewController: UIViewController {
         
         enum Student{
             
-            case Name(String)
+            case name(String)
             
-            case Mark(Int,Int,Int)
+            case mark(Int,Int,Int)
         }
-        var studDetails = Student.Name("Runoob")
+        var studDetails = Student.name("Runoob")
         
-        studDetails = Student.Name("ss")
+        studDetails = Student.name("ss")
         
-        var studMarks = Student.Mark(98,97,95)
+        var studMarks = Student.mark(98,97,95)
         
-        studMarks = Student.Mark(98,97,95)
+        studMarks = Student.mark(98,97,95)
         
         switch studDetails {
             
-        case .Name(let studName):
+        case .name(let studName):
             
             print("学生的名字是: \(studName)。")
             
-        case .Mark(let Mark1, let Mark2, let Mark3):
+        case .mark(let Mark1, let Mark2, let Mark3):
             
             print("学生的成绩是: \(Mark1),\(Mark2),\(Mark3)。")
         }
@@ -257,26 +257,26 @@ class DetailViewController: UIViewController {
         //关联值
         enum BarCode{
             
-            case UPCA (Int,Int,Int)
+            case upca (Int,Int,Int)
             
-            case QRCODE (String)
+            case qrcode (String)
         }
         
-        var productBarcode = BarCode.UPCA(10, 20_10, 30)
+        var productBarcode = BarCode.upca(10, 20_10, 30)
         
         print("关联值  = \(productBarcode)")
         
-        productBarcode = .QRCODE("haha")
+        productBarcode = .qrcode("haha")
         
         print("关联值2 = \(productBarcode)")
         
         switch productBarcode {
             
-        case  .UPCA(let num1,let num2,let num3):
+        case  .upca(let num1,let num2,let num3):
             
             print("num1 \(num1) num2 \(num2) num3 \(num3)")
             
-        case  .QRCODE(let string):
+        case  .qrcode(let string):
             
             print("string \(string) )")
         default:
@@ -366,7 +366,7 @@ class DetailViewController: UIViewController {
         
 //        var Astruct =  MarkStruct(mark:10)
 
-        var Astruct =  MarkStruct.init(mark: 10)
+        let Astruct =  MarkStruct.init(mark: 10)
         
         var Bstruct = Astruct // aStruct 和 bStruct 是使用相同值的结构体！
         
@@ -442,7 +442,7 @@ class DetailViewController: UIViewController {
         
 //        下面的示例定义了一个名为ages的字典，其中储存了四个人的名字和年龄。ages字典被赋予了一个名为copiedAges的新变量，同时ages在赋值的过程中被拷贝。赋值结束后，ages和copiedAges成为两个相互独立的字典。
         
-        var ages = ["Peter": 23, "Wei": 35, "Anish": 65, "Katya": 19]
+        let ages = ["Peter": 23, "Wei": 35, "Anish": 65, "Katya": 19]
         
         var copiedAges = ages
         
@@ -515,7 +515,7 @@ class DetailViewController: UIViewController {
             
         }
         
-        var newMyStudent = myStudent()
+        let newMyStudent = myStudent()
         
         print(newMyStudent.newNumber.name)
         
@@ -546,7 +546,7 @@ class DetailViewController: UIViewController {
             }
         }
         
-        var Newsample = sample()
+        let Newsample = sample()
         
        // Newsample.middle = (20.0,30.0)
         
@@ -622,7 +622,7 @@ class DetailViewController: UIViewController {
 
         class Math{
         
-            class func abs(number:Int) ->Int{
+            class func abs(_ number:Int) ->Int{
             
                 if number<0 {
                     
@@ -638,7 +638,7 @@ class DetailViewController: UIViewController {
         struct absno{
         
             //声明结构体和枚举的类型方法，在方法的func关键字之前加上关键字static。类可能会用关键字class来允许子类重写父类的实现方法
-            static func abs(number:Int) ->Int{
+            static func abs(_ number:Int) ->Int{
             
                 if number < 0 {
                     
@@ -693,7 +693,7 @@ class DetailViewController: UIViewController {
             
         }
         
-        var divvision = subexample.init(decrmmenter: 100)
+        let divvision = subexample.init(decrmmenter: 100)
         
         print("100 / 10 等于 \(divvision[10])")
         
@@ -701,7 +701,7 @@ class DetailViewController: UIViewController {
         
         class daysofaweek{
         
-          private   var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
+          fileprivate   var days = ["Sunday", "Monday", "Tuesday", "Wednesday",
                                 "Thursday", "Friday", "saturday"]
         
             
@@ -737,7 +737,7 @@ class DetailViewController: UIViewController {
             
         }
         
-        var  p = daysofaweek()
+        let  p = daysofaweek()
         
         print(p[100]) //也会越界
         
@@ -832,7 +832,7 @@ class DetailViewController: UIViewController {
 //            访问超类的方法、属性及下标脚本
 //            你可以通过使用super前缀来访问超类的方法，属性或下标脚本。
 
-            private override var stname: String?{
+            fileprivate override var stname: String?{
             
                 get{
                 
@@ -913,7 +913,8 @@ class DetailViewController: UIViewController {
         
             static var coninsInBank = 10_000
             
-            static func vendConins(var numberOfConinsToVend : Int) ->Int {
+            static func vendConins(_ numberOfConinsToVend : Int) ->Int {
+                var numberOfConinsToVend = numberOfConinsToVend
             
                 numberOfConinsToVend = min(coninsInBank, numberOfConinsToVend)
                 
@@ -922,7 +923,7 @@ class DetailViewController: UIViewController {
                 return numberOfConinsToVend
             }
         
-            static func receiveCoins(coins :Int){
+            static func receiveCoins(_ coins :Int){
             
                 coninsInBank += coins
             }
@@ -941,7 +942,7 @@ class DetailViewController: UIViewController {
                 
             }
             
-            func winCoins(coins : Int) -> Void {
+            func winCoins(_ coins : Int) -> Void {
                
                 self.coinsInGame += Bank.vendConins(coins)
                 
@@ -1231,10 +1232,10 @@ class DetailViewController: UIViewController {
             
             if item is chemistry {
                 
-                chemcount++
+                chemcount += 1
             }else if item is maths {
             
-                mathscount++
+                mathscount += 1
             }
         
             //        向下转型
@@ -1323,9 +1324,11 @@ class DetailViewController: UIViewController {
         
 //        eg1.计算型属性 没用倒文件
         
-        var number = 10.add
+        let number = 10.add
         
         number.sub
+        
+        number.popName()
         
         //构造器
 
@@ -1353,53 +1356,102 @@ class DetailViewController: UIViewController {
         
         var numb2 = 200
         
-        exchange(&numb1, b: &numb2)
+        numb1 = 200
         
-        print("jiao")
+        numb2 = 300
         
-//        泛型类型
-//        Swift 允许你定义你自己的泛型类型。
-//        自定义类、结构体和枚举作用于任何类型，如同Array和Dictionary的用法。
-        struct TOS<T> {
-            var items = [T]()
-            mutating func push(item: T) {
-                items.append(item)
-            }
-            
-            mutating func pop() -> T {
-                return items.removeLast()
-            }
-        }
+        print("泛型交换 行 \(numb1) numb2 \(numb2)")
+        
+        exchange(a: &numb1, b: &numb2)
+        
+        print("泛型交换 行 \(numb1) numb2 \(numb2)")
+        
+////        泛型类型
+////        Swift 允许你定义你自己的泛型类型。
+////        自定义类、结构体和枚举作用于任何类型，如同Array和Dictionary的用法。
+//        struct TOS<T> {
+//            var items = [T]()
+//            mutating func push(_ item: T) {
+//                items.append(item)
+//            }
+//            
+//            mutating func pop() -> T {
+//                return items.removeLast()
+//            }
+//        }
+//        var tos = TOS<String>()
+//        tos.push("Swift")
+//        print(tos.items)
+//        
+//        tos.push("泛型")
+//        print(tos.items)
+//        
+//        tos.push("类型参数")
+//        print(tos.items)
+//        
+//        tos.push("类型参数名")
+//        print(tos.items)
+//
+        
+//        扩展泛型类型
+//        当你扩展一个泛型类型的时候（使用 extension 关键字），你并不需要在扩展的定义中提供类型参数列表。更加方便的是，原始类型定义中声明的类型参数列表在扩展里是可以使用的，并且这些来自原始类型中的参数名称会被用作原始定义中类型参数的引用。
+//        struct TOS<T>{
+//        
+//            var items = [T]()
+//            
+////            使用 mutating 关键字修饰方法是为了能在该方法中修改 struct 或是 enum 的变量，在设计接口的时候，也要考虑到使用者程序的扩展性。所以要多考虑使用mutating来修饰方法。
+//            mutating func pushItem(item:T) -> Void {
+//                
+//                items.append(item)
+//            }
+//            
+//           mutating func popItem() -> Void {
+//                
+//                items.removeLast()
+//                
+//            }
+//        
+//        }
+        
         var tos = TOS<String>()
-        tos.push("Swift")
-        print(tos.items)
         
-        tos.push("泛型")
-        print(tos.items)
+        tos.pushItem(item: "你猜猜1")
         
-        tos.push("类型参数")
-        print(tos.items)
+        tos.pushItem(item: "你猜猜2")
         
-        tos.push("类型参数名")
-        print(tos.items)
+        tos.pushItem(item: "你猜猜3")
+        
+        tos.pushItem(item: "你猜猜4")
+        
+        print("tos item \(tos.items)")
+        
+        tos.popItem()
+        
+        print("pop end item \(tos.items)")
 
-
+        print("first item  \(tos.first)")
         
+
         
     }
     
 
-//    func exchange(inout a : Int, inout b: Int) -> Void {
-//       
-//        let temp = a
-//        
-//        a = b
-//        
-//        b = temp
-//        
-//    }
     
     
+    /// 声明一个泛型 <E>
+    ///
+    /// - parameter a: 类型
+    /// - parameter b: 类型
+    func exchange<E>( a: inout E, b: inout E) {
+        
+        let temp = a
+        
+        a = b
+        
+        b = temp
+    }
+    
+
     deinit{
     
         print("vc 被析构")
