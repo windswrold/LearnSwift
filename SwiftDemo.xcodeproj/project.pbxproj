@@ -199,8 +199,13 @@
 				TargetAttributes = {
 					817DCA891D65566A00D5948A = {
 						CreatedOnToolsVersion = 7.2.1;
+<<<<<<< Updated upstream
 						DevelopmentTeam = FSL3FCUGV3;
 						LastSwiftMigration = 0800;
+=======
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+>>>>>>> Stashed changes
 					};
 					817DCA9D1D65566A00D5948A = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -410,6 +415,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.excenon.SwiftDemo;
@@ -423,6 +430,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.excenon.SwiftDemo;

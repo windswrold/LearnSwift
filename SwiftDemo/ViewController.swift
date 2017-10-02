@@ -37,12 +37,46 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var fbArr = [Int]()
+        
+        fbArr.append(0)
+        
+        fbArr.append(1)
+        
+<<<<<<< Updated upstream
+        UIView.animate(withDuration: 2, animations: { () -> Void in
+            
+            
+=======
+        for i  in 0..<10 {//斐波那契数列前100位，也可以写成一个方法，前多少位根据传入参数决定
+            
+            let count = fbArr.count
+            
+            print("before \(fbArr)")
+            
+            let last1 = fbArr.index(before: count-1)
+            
+            let last2 = fbArr.index(before: count)
+            
+            print("last1 = \(last1) + last2 = \(last2)")
+            //    
+            //    var last = last1 + last2
+            //    
+            fbArr.append(last1+last2)
+            
+            
+        }
+        
+        print(fbArr)
+        
+        
         backView.backgroundColor = UIColor.init(red: 10/255.0, green: 20/255.0, blue: 30/255.0, alpha: 1)
         
         
         UIView.animate(withDuration: 2, animations: { () -> Void in
             
             
+>>>>>>> Stashed changes
         }) 
     
         
@@ -329,8 +363,13 @@ class ViewController: UIViewController {
         print("移除 第\(telPhoneList.count-1) 元素值 \(telPhoneList.remove(at: telPhoneList.count-1))")
         
         //使用EnumerateSequence函数来遍历数租 返回值是一个元组
+<<<<<<< Updated upstream
 //        let hahahlist  = EnumeratedSequence.
 //        
+=======
+//        let hahahlist  = EnumeratedSequence(telPhoneList)
+        
+>>>>>>> Stashed changes
 //        for phoneObj in hahahlist{
 //            
 //            print("便利后返回元祖 \(phoneObj)")

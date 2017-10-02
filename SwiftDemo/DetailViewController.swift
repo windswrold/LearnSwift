@@ -1045,6 +1045,7 @@ class DetailViewController: UIViewController {
     
     }
     
+//    MARK: - 内存管理
     /**
      内存管理
      */
@@ -1148,6 +1149,13 @@ class DetailViewController: UIViewController {
 //        toc = nil
 //        
 //        list = nil
+        
+//        
+//        
+//        
+//        
+//        
+//        
         
         
         

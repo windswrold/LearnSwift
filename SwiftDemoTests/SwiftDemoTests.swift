@@ -7,7 +7,11 @@
 //
 
 import XCTest
+<<<<<<< Updated upstream
  
+=======
+
+>>>>>>> Stashed changes
 
 class SwiftDemoTests: XCTestCase {
     
